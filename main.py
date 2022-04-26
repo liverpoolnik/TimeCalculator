@@ -4,7 +4,7 @@ def add_time(start, duration, weekday=''):
     a = int(a[0])
     b = a % 24
     d = b
-    r = 0
+
     t = start.split(' ')
     t1 = (str(t[0])).split(':')
     h = int(t1[0])
@@ -14,7 +14,6 @@ def add_time(start, duration, weekday=''):
     st_day = weekday.lower()
     day = a // 24
 
-    week_day = ''
     if m + m1 > 59:
         h += 1
         m = (m + m1) - 60
@@ -74,6 +73,7 @@ def add_time(start, duration, weekday=''):
         return new_time
 
 
+# Starter code
 print(add_time("11:06 PM", "2:02"))
 print(add_time("3:30 PM", "2:12"))
 print(add_time("9:15 PM", "5:30"))
